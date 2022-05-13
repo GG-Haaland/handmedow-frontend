@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// import Logo from '../assets/images/Master_Logo.png'
+import Logo from '../assets/hand1.png'
 import '../style/nav.css'
 import React from "react";
 import { useState, useEffect } from "react"
@@ -45,7 +45,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
                   {" "}
                   <Link to="/">
                     <div className="logo-wrapper" alt="logo">
-                      {/* <img className="logo" src={Logo} alt="ITB Logo" /> */}
+                      <img className="logo" src={Logo} alt="ITB Logo" />
                     </div>
                   </Link>
                 </li>
@@ -90,7 +90,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
             <li className="navLinks">
               <Link to="/">
                 <div className="logo-wrapper" alt="logo">
-                  {/* <img className="logo" src={Logo} alt="ITB Logo" /> */}
+                  <img className="logo" src={Logo} alt="ITB Logo" />
                 </div>
               </Link>
             </li>  
