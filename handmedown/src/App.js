@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Nav from './components/Nav';
+import Home from './pages/Home';
 import './App.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Nav/>
       <main >
       <Routes>
+        <Route path="/" exact element={<Home />} />
         {/* <Route path="/" exact element={<Home/>} />
         <Route path="/createAccount" exact element={<NewAccount/>} />
         <Route path="/login" exact element={<Login setUser={setUser} toggleAuthenticated={toggleAuthenticated} />} />
