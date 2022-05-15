@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import Logo from '../assets/hand1.png'
+import Logo from '../assets/images/Master_Logo.png'
 import '../style/nav.css'
 import React from "react";
 import { useState, useEffect } from "react"
 import { GiHamburgerMenu }  from 'react-icons/gi';
+import { Container, Navbar } from 'react-bootstrap'
 // import { CgProfile }  from 'react-icons/';
 
 
@@ -37,7 +38,13 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
     let authenticatedOptions
     if (user){ 
       authenticatedOptions = (
+        
         <div className="header">
+          <Navbar sticky='top' bg='primary' variant='dark'>
+            <Container>
+              <Navbar.Brand href='#home'> Contact Form </Navbar.Brand> 
+            </Container>  
+          </Navbar>
           <nav className="navigation">
             {(toggleMenu || screenWidth > 900) && (
               <ul className="list">

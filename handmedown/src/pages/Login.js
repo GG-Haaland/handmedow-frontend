@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UserSignIn } from '../services/auth'
-import '../style/login.css'
+import '../style/custom.css'
+import { Form } from 'react-bootstrap'
 
 const Login = (props) =>{
 let navigate = useNavigate()
@@ -37,10 +38,11 @@ let navigate = useNavigate()
 
     return(
         <div onKeyPress={handleKeypress}>
-            <div className='input-page'>
-                <form onSubmit={handleSubmit} >
-                <div className="input-wrap-register">
-                <input
+            <div className="color-overlay d-flex justify-content-center align-items-center">
+                <Form className="rounded p-4 p-sm-3" onSubmit={handleSubmit} >
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Email Address</Form.Label>
+                <Form.Control
                 onChange={handleChange}
                 name="email"
                 type="text"
@@ -48,7 +50,7 @@ let navigate = useNavigate()
                 value={formVal.email}
                 required
                 />
-                </div>
+                </Form.Group>
                 <div className="input-wrap-register">
                 <input
                 onChange={handleChange}
@@ -66,10 +68,54 @@ let navigate = useNavigate()
                     !formVal.password                 
                 }
                 > Sign In</button>
-                </form>
+                </Form>
             </div>
         </div>
     )
 }
 
 export default Login
+
+{/* <div
+        onKeyPress={handleKeypress}
+        className="color-overlay d-flex justify-content-center align-items-center"
+      >
+        <Form className="rounded p-4 p-sm-3">
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email Address</Form.Label>
+            <Form.Control
+              onChange={handleChange}
+              type="email"
+              placeholder="Enter Email"
+              value={formVal.email}
+              required
+            />
+            <Form.Text className="test-muted">
+              We'll never share your email with anyone else
+            </Form.Text>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              onChange={handleChange}
+              type="password"
+              placeholder="password"
+              value={formVal.password}
+              onKeyPress={handleKeypress}
+              required
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="Remember Me" />
+          </Form.Group>
+          <button  className= 'sign-in'
+                disabled={
+                    !formVal.email ||
+                    !formVal.password                 
+                }
+                > Sign In</button>
+        </Form>
+      </div>
+    ); */}

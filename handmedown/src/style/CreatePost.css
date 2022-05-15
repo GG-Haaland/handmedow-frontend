@@ -1,0 +1,8 @@
+.picture {
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 3em;
+    border: 3px solid black;
+}

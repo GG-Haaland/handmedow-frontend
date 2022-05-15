@@ -2,120 +2,179 @@
 
 .header .navegation {
   
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  color: white;
+  padding-top: 1em;
+  min-height: 2em;
+  
+  font-family: 'gilroy-light';
+  opacity: 0.85;
+
+  padding-left:30px;
+  padding-right:30px;
+  text-shadow: -1px 1px 2px #000;
+  
+  
+}
+
+.list {
+  list-style-type: none;
+  /* background: linear-gradient(45deg, rgb(156, 14, 156), rgb(206, 206, 211)); */
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  
+}
+.navLinks {
+  margin-right: 20px;
+  font-size: 30px;
+
+  color: #f1f1f1;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  align-items: center;
+ 
+}
+
+.navBtn {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  padding: 5px;
+  color: #000;
+  font-size: 18px;
+}
+
+.logo{  
+  height: 100px;
+  width: 200px;
+  display: inline;
+}
+.logo-wrapper{
+  display: inline;
+  
+}
+
+.logo-mobile {  
+  height: 100px;
+  width: 200px;
+  /* display: inline; */
+  display: none;
+}
+.logo-wrapper-mobile{
+  display: inline;
+  display: none;
+}
+
+
+
+
+@media screen and (max-width: 900px){
+  .list {
+      flex-direction: column;
+      height: auto;
+      padding-right: 2em ;
+      padding-left: 2em ;
+  }
+  .navLinks:nth-child(1){
+      border-top: 1px solid rgba(255, 255, 255, 0.555);
+      margin-top: 50px;
+  }
+  .navLinks {
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.555);
+      text-align: center;
+      margin-right: 0px;
+      padding: 20px 0;
+  }
+  .navBtn {
+      display: block;
+      margin-bottom: 20px
+  }
+  .logo-mobile {  
+    height: 100px;
+    width: 200px;
+    display: inline;
+    /* display: none; */
+  }
+  .logo-wrapper-mobile{
+    display: inline;
+    /* display: none; */
+  }
+  /* .header{
+    
+  } */
+}
+
+/* .logo{  
+    height: 100px;
+    width: 200px;
+    display: inline;
+}
+.logo-wrapper{
+    display: inline;
+    
+}
+ .welcomeNav{
+    display: inline;
+
+    
+}
+
+.navigation, header {
     justify-content: space-evenly;
     align-items: center;
-    display: flex;
     color: white;
     padding-top: 1em;
     min-height: 2em;
-    
     font-family: 'gilroy-light';
     opacity: 0.85;
   
     padding-left:30px;
     padding-right:30px;
     text-shadow: -1px 1px 2px #000;
-    
-    
-  }
-  
-  .list {
-    list-style-type: none;
-    /* background: linear-gradient(45deg, rgb(156, 14, 156), rgb(206, 206, 211)); */
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-    
-  }
-  .navLinks {
+    margin-top: 0px;
     margin-right: 20px;
-    font-size: 30px;
-  
-    color: #f1f1f1;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    display: flex;
+  }
+
+  .navigation a:hover{
+    color: rgb(0, 0, 0);
     cursor: pointer;
-    text-align: center;
+    background-color: rgb(224, 224, 224);
+    text-shadow: none,
+
+
+  }
+  .navigation a{
+    color: rgb(255, 255, 255);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 7px;
     text-decoration: none;
-    align-items: center;
-   
+
   }
+
   
-  .navBtn {
-    display: none;
-    position: absolute;
-    right: 10px;
-    top: 7px;
-    padding: 5px;
-    color: #000;
-    font-size: 18px;
-  }
-  
-  .logo{  
-    height: 100px;
-    width: 200px;
-    display: inline;
-  }
-  .logo-wrapper{
-    display: inline;
+
+
+  @media (max-width:1024px){
     
-  }
-  
-  .logo-mobile {  
-    height: 100px;
-    width: 200px;
-    /* display: inline; */
-    display: none;
-  }
-  .logo-wrapper-mobile{
-    display: inline;
-    display: none;
-  }
-  
-  
-  
-  
-  @media screen and (max-width: 900px){
-    .list {
-        flex-direction: column;
-        height: auto;
-        padding-right: 2em ;
-        padding-left: 2em ;
-    }
-    .navLinks:nth-child(1){
-        border-top: 1px solid rgba(255, 255, 255, 0.555);
-        margin-top: 50px;
-    }
-    .navLinks {
-        width: 100%;
-        border-top: 1px solid rgba(255, 255, 255, 0.555);
-        text-align: center;
-        margin-right: 0px;
-        padding: 20px 0;
-    }
-    .navBtn {
-        display: block;
-        margin-bottom: 20px
-    }
-    .logo-mobile {  
-      height: 100px;
-      width: 200px;
+    .logo{
+      height: 5rem;
+      width: 5rem;
       display: inline;
-      /* display: none; */
-    }
-    .logo-wrapper-mobile{
-      display: inline;
-      /* display: none; */
-    }
-    /* .header{
-      
-    } */
-  }
-  
-  /* .logo{  
-      height: 100px;
-      width: 200px;
-      display: inline;
+      margin-left: 3em;
   }
   .logo-wrapper{
       display: inline;
@@ -135,15 +194,12 @@
       min-height: 2em;
       font-family: 'gilroy-light';
       opacity: 0.85;
-    
-      padding-left:30px;
-      padding-right:30px;
       text-shadow: -1px 1px 2px #000;
       margin-top: 0px;
-      margin-right: 20px;
+      margin-right: 0.3em;
       margin-bottom: 0px;
       margin-left: 0px;
-      display: flex;
+      display: grid;
     }
   
     .navigation a:hover{
@@ -165,63 +221,7 @@
   
     }
   
-    
   
   
-    @media (max-width:1024px){
-      
-      .logo{
-        height: 5rem;
-        width: 5rem;
-        display: inline;
-        margin-left: 3em;
-    }
-    .logo-wrapper{
-        display: inline;
-        
-    }
-     .welcomeNav{
-        display: inline;
-    
-        
-    }
-    
-    .navigation, header {
-        justify-content: space-evenly;
-        align-items: center;
-        color: white;
-        padding-top: 1em;
-        min-height: 2em;
-        font-family: 'gilroy-light';
-        opacity: 0.85;
-        text-shadow: -1px 1px 2px #000;
-        margin-top: 0px;
-        margin-right: 0.3em;
-        margin-bottom: 0px;
-        margin-left: 0px;
-        display: grid;
-      }
-    
-      .navigation a:hover{
-        color: rgb(0, 0, 0);
-        cursor: pointer;
-        background-color: rgb(224, 224, 224);
-        text-shadow: none,
-    
-    
-      }
-      .navigation a{
-        color: rgb(255, 255, 255);
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        border-radius: 7px;
-        text-decoration: none;
-    
-      }
-    
-    
-    
-    
-    } */
+  
+  } */
