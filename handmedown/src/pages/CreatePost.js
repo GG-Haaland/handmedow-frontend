@@ -8,7 +8,8 @@ const Login = ({user, authenticated}) =>{
         description:"",
         image:"",
         price:"",
-        title:""
+        title:"",
+        email:"",
     })
     const navigate = useNavigate()
 
@@ -70,6 +71,14 @@ const Login = ({user, authenticated}) =>{
                 required
                 />
                 </div>
+                <input
+                onChange={handleChange}
+                name="email"
+                type="text"
+                placeholder={user.email}
+                value={formVal.email}
+                required
+                />
                 <button
                 disabled={
                 !authenticated ||

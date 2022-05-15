@@ -1,7 +1,9 @@
 import React from "react"
 import { Button, Card} from 'react-bootstrap'
 
-const PostCard = ({ post, user }) => {
+const PostCard = ({ post, users }) => {
+  console.log(post)
+  console.log(users)
 
   return (
     <div>
@@ -29,8 +31,20 @@ const PostCard = ({ post, user }) => {
               </div>
             </Card.Text>
             <Card.Subtitle className='mb-2 text-muted'>
-              Sold by:
+              Interested?
+             
             </Card.Subtitle>
+            <Card.Text>
+            <a href={`https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${post.email}`} 
+            target="_blank"
+            >
+              <Button 
+              style={{boarderRadius: '20px'}} 
+              varient='primary'>
+                Contact
+              </Button>
+              </a> 
+            </Card.Text>
        
           </Card.Body>
 

@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Col, Row, Container } from 'react-bootstrap'
 import PostCard from './PostCard'
 
-const Posts = () => {
+const Posts = (users) => {
 
         useEffect(() => {
             getPosts()
@@ -30,7 +30,7 @@ const Posts = () => {
             {loading && 
             posts.map((post) =>(
                 <Col sm={12} med={6} lg={4} key={post.id}>
-                    <PostCard post={post}/>
+                    <PostCard post={post} users={users}/>
                 </Col>
             ))}
         </Row>

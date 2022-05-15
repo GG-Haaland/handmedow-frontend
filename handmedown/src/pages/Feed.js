@@ -143,10 +143,10 @@ const Feed = ({user, authenticated}) => {
                       <h3 class="card-title">{post.title}</h3>
                       <h4 class="card-text">${post.price}</h4> */}
                       {/* <p class="card-text">{post.description}</p> */}
-                      {/* <a href="#" class="btn btn-primary">
+                       <a href="#" class="btn btn-primary">
                         Go somewhere
                       </a>
-                    </div> */}
+                    {/* </div>  */}
                     </Card.Body>
                   </Card>
 
