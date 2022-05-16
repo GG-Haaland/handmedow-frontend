@@ -5,12 +5,12 @@
 <p align="center">
   The Capstone Project of GA SEI Cohort built with <a href="https://reactjs.org/" target="_blank">React</a>, <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> By GJ Haaland
 </p>
-<p align="center">
+<!-- <p align="center">
   Follow me:
   <a href="https://www.linkedin.com/in/gj-haaland-b3b131b7/" target="_blank">LinkedIn</a>,
   <a href="https://github.com/GG-Haaland" target="_blank">Github</a>,
   <a href="https://www.instagram.com/gee_eej/" target="_blank">Instagram</a>
-</p>
+</p> -->
 <div align="center">
 
   

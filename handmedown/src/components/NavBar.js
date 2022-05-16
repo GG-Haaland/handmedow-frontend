@@ -17,8 +17,8 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
             bg="danger"
             variant="primary"
           >
-            <ReactBootStrap.Navbar.Brand href="#home">
-            <Link to="/">
+            <ReactBootStrap.Navbar.Brand href="#home" className="text-decoration-none">
+            <Link className="text-decoration-none" to="/">
                 <ReactBootStrap.Nav.Link href="#home">
                   HandMeDown
                 </ReactBootStrap.Nav.Link>
@@ -28,8 +28,8 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
             <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
               <ReactBootStrap.Nav className="mr-auto">
-                <Link to="/feed">
-                  <ReactBootStrap.Nav.Link href="#feed">
+                <Link to="/feed" className="text-decoration-none">
+                  <ReactBootStrap.Nav.Link href="#feed" className="text-decoration-none">
                     Feed
                   </ReactBootStrap.Nav.Link>
                 </Link>
@@ -38,21 +38,21 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
                   id="collasible-nav-dropdown"
                 >
                   <ReactBootStrap.NavDropdown.Item href="#action/3.1">
-                  <Link to="/edit">
+                  <Link to="/edit" className="text-decoration-none">
                   
                    Edit User
                   
                 </Link>
                   </ReactBootStrap.NavDropdown.Item>
                   <ReactBootStrap.NavDropdown.Item href="#action/3.2">
-                  <Link to="/profile">
+                  <Link to="/profile" className="text-decoration-none">
                   {/* <ReactBootStrap.Nav.Link href="#action/3.1"> */}
                    Profile
                   {/* </ReactBootStrap.Nav.Link> */}
                 </Link>
                   </ReactBootStrap.NavDropdown.Item>
                   <ReactBootStrap.NavDropdown.Item href="#action/3.3">
-                  <Link to="/usersPosts">
+                  <Link to="/usersPosts" className="text-decoration-none">
                   {/* <ReactBootStrap.Nav.Link href="#action/3.1"> */}
                    My Posts
                   {/* </ReactBootStrap.Nav.Link> */}
@@ -60,7 +60,7 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
                   </ReactBootStrap.NavDropdown.Item>
                   <ReactBootStrap.NavDropdown.Divider />
                   <ReactBootStrap.NavDropdown.Item href="#action/3.4">
-                  <Link to="/createpost">
+                  <Link to="/createpost" className="text-decoration-none">
                  
                     Create Post
                   
@@ -69,12 +69,12 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
                 </ReactBootStrap.NavDropdown>
               </ReactBootStrap.Nav>
               <ReactBootStrap.Nav>
-                <Link to="/createpost">
+                <Link to="/createpost" className="text-decoration-none">
                   <ReactBootStrap.Nav.Link href="#createpost">
                     Create Post
                   </ReactBootStrap.Nav.Link>
                 </Link>
-                <Link onClick={handleLogOut} to="/" >
+                <Link onClick={handleLogOut} to="/" className="text-decoration-none" >
                   <ReactBootStrap.Nav.Link href="#logout">
                     Logout
                   </ReactBootStrap.Nav.Link>

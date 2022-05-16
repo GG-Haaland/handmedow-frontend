@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import './App.css';
 import './style/main.css'
@@ -77,10 +78,11 @@ function App() {
         <Route path="/post/feed/:id" element={ <PostDeets post={post} getPosts={getPosts} />} />
       </Routes>
       </main>
-      {/* <footer className='footer'>About Us</footer> */}
+      <Footer />
       </div> 
    </Router>
   
+ 
   );
 }
 

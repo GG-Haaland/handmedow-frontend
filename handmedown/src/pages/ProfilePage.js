@@ -72,22 +72,27 @@ const ProfilePage = ({ user, authenticated }) => {
       <div className="container">
         <div className="profile">
           <img className="profile-image" src={user.image} alt="profile-pic" />
-          <div className="profile-user-settings">
-            <h1 className="profile-user-name"> {user.username} </h1>
-          </div>
           <div className="profile-bio">
+          <div>
+            
+              <div>Username</div>
+              <h1 className="profile-real-name">
+                {user.username}
+              </h1>
+            </div>
             <div>
+              <div>Name</div>
               <span className="profile-real-name">
                 {user.firstname} {user.lastname}
               </span>
             </div>
-            <a href={`https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${user.email}`} target="_blank">
+            {/* <a href={`https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${user.email}`} target="_blank">
               <Button 
               style={{boarderRadius: '20px'}} 
               varient='primary'>
                 Contact
               </Button>
-              </a> 
+              </a>  */}
               <div>
               <Link to="/edit">
               <Button 
