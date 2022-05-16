@@ -14,7 +14,7 @@
 <div align="center">
 
   
-  ![Trello](https://img.shields.io/badge/-Trello-0052CC?style=for-the-badge&logo=Trello&logoColor=FFFFFF)
+  <!-- ![Trello](https://img.shields.io/badge/-Trello-0052CC?style=for-the-badge&logo=Trello&logoColor=FFFFFF) -->
 
 </div>
 
