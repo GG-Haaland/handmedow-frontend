@@ -3,13 +3,10 @@ import { UserPost, PostEdit, PostDelete, } from "../services/PostServices";
 import { useNavigate } from "react-router-dom";
 import Comments from "../components/Comments";
 import "../style/profile.css";
-// import "../style/main.css"
-// import "../style/Feed.css"
-import { Link } from "react-router-dom";
-import { BsGearFill }  from 'react-icons/bs';
-import { Button, Card } from 'react-bootstrap'
 
-const ProfilePage = ({ user, authenticated }) => {
+
+
+const MyPosts = ({ user, authenticated }) => {
   let navigate = useNavigate();
 
   const [posts, setPosts] = useState([]);
@@ -65,36 +62,6 @@ const ProfilePage = ({ user, authenticated }) => {
 
     
     <div>
-      <div className="container">
-        <div className="profile">
-          <img className="profile-image" src={user.image} alt="profile-pic" />
-          <div className="profile-user-settings">
-            <h1 className="profile-user-name"> {user.username} </h1>
-          </div>
-          <div className="profile-bio">
-            <div>
-              <span className="profile-real-name">
-                {user.firstname} {user.lastname}
-              </span>
-            </div>
-            <a href={`https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${user.email}`} target="_blank">
-              <Button 
-              style={{boarderRadius: '20px'}} 
-              varient='primary'>
-                Contact
-              </Button>
-              </a> 
-              <div>
-              <Link to="/edit">
-              <Button 
-              style={{boarderRadius: '20px'}} 
-              varient='primary'> Edit Profile <BsGearFill /></Button>
-              </Link>
-              </div>
-          </div>
-        </div>
-      </div>
-
       <div className="posts-out">
         {cardFocus[0] ? (
           <div>
@@ -203,64 +170,6 @@ const ProfilePage = ({ user, authenticated }) => {
 };
 
 
-export default ProfilePage;
+export default MyPosts;
 
 
-{/* <div class="container d-flex justify-content-center align-items-center">
-             
-             <div CclassName="card">
-
-              <div CclassName="upper">
-
-                <img src="https://i.imgur.com/Qtrsrk5.jpg" CclassName="img-fluid">
-                
-              </div>
-
-              <div CclassName="user text-center">
-
-                <div CclassName="profile">
-
-                  <img src="https://i.imgur.com/JgYD2nQ.jpg" CclassName="rounded-circle" width="80">
-                  
-                </div>
-
-              </div>
-
-
-              <div CclassName="mt-5 text-center">
-
-                <h4 CclassName="mb-0">Benjamin Tims</h4>
-                <span CclassName="text-muted d-block mb-2">Los Angles</span>
-
-                <button CclassName="btn btn-primary btn-sm follow">Follow</button>
-
-
-                <div CclassName="d-flex justify-content-between align-items-center mt-4 px-4">
-
-                  <div CclassName="stats">
-                    <h6 CclassName="mb-0">Followers</h6>
-                    <span>8,797</span>
-
-                  </div>
-
-
-                  <div CclassName="stats">
-                    <h6 CclassName="mb-0">Projects</h6>
-                    <span>142</span>
-
-                  </div>
-
-
-                  <div CclassName="stats">
-                    <h6 CclassName="mb-0">Ranks</h6>
-                    <span>129</span>
-
-                  </div>
-                  
-                </div>
-                
-              </div>
-               
-             </div>
-
-           </div> */}

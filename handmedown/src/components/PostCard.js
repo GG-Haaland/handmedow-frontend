@@ -1,13 +1,18 @@
 import React from "react"
 import { Button, Card} from 'react-bootstrap'
+import { useNavigate } from "react-router-dom";
 
 const PostCard = ({ post, users }) => {
   console.log(post)
   console.log(users)
+  let navigate = useNavigate();
 
+  const showPost = (post) => {
+    navigate(`post/${post.id}`);
+  };
   return (
     <div>
-        <Card className='my-3 p-3 rounded h-90'>
+        <Card className='my-3 p-3 rounded h-90' onClick={() => showPost(post)} key={post.id}>
           <Card.Img style={{objectFit:"contain"}} variant='top' src={post.image}/>
           <Card.Body>
             <Card.Title>

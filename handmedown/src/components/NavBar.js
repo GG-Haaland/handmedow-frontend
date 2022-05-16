@@ -87,9 +87,9 @@ const NavBar = ({ authenticated, user, handleLogOut }) => {
                 </Link>
                   </ReactBootStrap.NavDropdown.Item>
                   <ReactBootStrap.NavDropdown.Item href="#action/3.3">
-                  <Link to="/profile">
+                  <Link to="/usersPosts">
                   {/* <ReactBootStrap.Nav.Link href="#action/3.1"> */}
-                   Posts
+                   My Posts
                   {/* </ReactBootStrap.Nav.Link> */}
                 </Link>
                   </ReactBootStrap.NavDropdown.Item>

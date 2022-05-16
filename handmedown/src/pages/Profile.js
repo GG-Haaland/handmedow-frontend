@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { BsGearFill }  from 'react-icons/bs';
 import { Button, Card } from 'react-bootstrap'
 
-const ProfilePage = ({ user, authenticated }) => {
+const Profile = ({ user, authenticated }) => {
   let navigate = useNavigate();
 
   const [posts, setPosts] = useState([]);
@@ -59,43 +59,55 @@ const ProfilePage = ({ user, authenticated }) => {
       setPosts(data);
     };
     handlePosts();
-  }, []);
+  }, [user.id]);
+
+
+
+
 
   return user && authenticated && posts ? (
-
-    
-    <div>
-      <div className="container">
-        <div className="profile">
-          <img className="profile-image" src={user.image} alt="profile-pic" />
-          <div className="profile-user-settings">
-            <h1 className="profile-user-name"> {user.username} </h1>
-          </div>
-          <div className="profile-bio">
-            <div>
-              <span className="profile-real-name">
-                {user.firstname} {user.lastname}
-              </span>
+<section className="h-100 gradient-custom-2">
+  <div className="container py-5 h-100">
+    <div className="row d-flex justify-content-center align-items-center h-100">
+      <div className="col col-lg-9 col-xl-7">
+        <div className="card">
+          <div className="rounded-top text-white d-flex flex-row" style="background-color: #000; height:200px;">
+            <div className="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+              <img src={user.image} 
+                alt="Generic placeholder image" className="img-fluid img-thumbnail mt-4 mb-2"
+                style="width: 150px; z-index: 1"/>
+              <button type="button" className="btn btn-outline-dark" data-mdb-ripple-color="dark"
+                style="z-index: 1;">
+                Edit profile
+              </button>
             </div>
-            <a href={`https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${user.email}`} target="_blank">
-              <Button 
-              style={{boarderRadius: '20px'}} 
-              varient='primary'>
-                Contact
-              </Button>
-              </a> 
-              <div>
-              <Link to="/edit">
-              <Button 
-              style={{boarderRadius: '20px'}} 
-              varient='primary'> Edit Profile <BsGearFill /></Button>
-              </Link>
-              </div>
+            <div className="ms-3" style="margin-top: 130px;">
+              <h5>{user.firstname} {user.lastname}</h5>
+   
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div className="posts-out">
+          <div className="p-4 text-black" style="background-color: #f8f9fa;">
+            <div className="d-flex justify-content-end text-center py-1">
+              <div>
+                <p className="mb-1 h5">253</p>
+                <p className="small text-muted mb-0">Posts</p>
+              </div>
+              <div className="px-3">
+                <p className="mb-1 h5">1026</p>
+                <p className="small text-muted mb-0">Followers</p>
+              </div>
+              <div>
+                <p className="mb-1 h5">478</p>
+                <p className="small text-muted mb-0">Following</p>
+              </div>
+            </div>
+          </div>
+          <div className="card-body p-4 text-black">
+            
+            <div className="d-flex justify-content-between align-items-center mb-4">
+              <p className="lead fw-normal mb-0">My Posts</p>
+            </div>
+            <div className="posts-out">
         {cardFocus[0] ? (
           <div>
             <div className="focuscard">
@@ -193,6 +205,12 @@ const ProfilePage = ({ user, authenticated }) => {
         )}
       </div>
     </div>
+    </div>
+          </div>
+        </div>
+      </div>
+   
+</section>
   ) : (
     <div className="no-buddy">
       <h3> Please login to have access to our website.</h3>
@@ -200,67 +218,70 @@ const ProfilePage = ({ user, authenticated }) => {
       <button onClick={() => navigate("/createAccount")}> Register </button>
     </div>
   );
-};
+          
+  
+}
+
+export default Profile;
 
 
-export default ProfilePage;
+
+<div class="container mt-5 d-flex justify-content-center">
+
+<div class="card p-3">
+
+    <div class="d-flex align-items-center">
+
+        <div class="image">
+    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" class="rounded" width="155" >
+    </div>
+
+    <div class="ml-3 w-100">
+        
+       <h4 class="mb-0 mt-0">Alex HMorrision</h4>
+       <span>Senior Journalist</span>
+
+       <div class="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
+
+        <div class="d-flex flex-column">
+
+            <span class="articles">Articles</span>
+            <span class="number1">38</span>
+            
+        </div>
+
+        <div class="d-flex flex-column">
+
+            <span class="followers">Followers</span>
+            <span class="number2">980</span>
+            
+        </div>
 
 
-{/* <div class="container d-flex justify-content-center align-items-center">
-             
-             <div CclassName="card">
+        <div class="d-flex flex-column">
 
-              <div CclassName="upper">
-
-                <img src="https://i.imgur.com/Qtrsrk5.jpg" CclassName="img-fluid">
-                
-              </div>
-
-              <div CclassName="user text-center">
-
-                <div CclassName="profile">
-
-                  <img src="https://i.imgur.com/JgYD2nQ.jpg" CclassName="rounded-circle" width="80">
-                  
-                </div>
-
-              </div>
+            <span class="rating">Rating</span>
+            <span class="number3">8.9</span>
+            
+        </div>
+           
+       </div>
 
 
-              <div CclassName="mt-5 text-center">
+       <div class="button mt-2 d-flex flex-row align-items-center">
 
-                <h4 CclassName="mb-0">Benjamin Tims</h4>
-                <span CclassName="text-muted d-block mb-2">Los Angles</span>
+        <button class="btn btn-sm btn-outline-primary w-100">Chat</button>
+        <button class="btn btn-sm btn-primary w-100 ml-2">Follow</button>
 
-                <button CclassName="btn btn-primary btn-sm follow">Follow</button>
-
-
-                <div CclassName="d-flex justify-content-between align-items-center mt-4 px-4">
-
-                  <div CclassName="stats">
-                    <h6 CclassName="mb-0">Followers</h6>
-                    <span>8,797</span>
-
-                  </div>
+           
+       </div>
 
 
-                  <div CclassName="stats">
-                    <h6 CclassName="mb-0">Projects</h6>
-                    <span>142</span>
+    </div>
 
-                  </div>
-
-
-                  <div CclassName="stats">
-                    <h6 CclassName="mb-0">Ranks</h6>
-                    <span>129</span>
-
-                  </div>
-                  
-                </div>
-                
-              </div>
-               
-             </div>
-
-           </div> */}
+        
+    </div>
+    
+</div>
+ 
+</div>

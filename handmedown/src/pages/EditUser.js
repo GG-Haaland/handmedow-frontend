@@ -9,13 +9,14 @@ const Edit = ({ user, authenticated, setUser }) => {
     id: user.id,  
     username: formVal,
     image: formVal,
+   
 })
 
     const preSubmit = () => {
         const tempuser = user
         tempuser.image = formVal.image
         tempuser.username = formVal.username
-        
+       
     
         console.log(tempuser)
         console.log(user)
@@ -54,6 +55,16 @@ return(
             type="text"
             placeholder="Profile Picture URL"
             value={formVal.image}
+            />
+            </div>
+
+            <div className="input-wrap bio">
+            <input
+            onChange={handleChange}
+            name="bio"
+            type="text"
+            placeholder="Bio"
+            value={formVal.bio}
             />
             </div>
 
