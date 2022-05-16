@@ -33,7 +33,7 @@
 ## **_Summary_**
 
 For my capstone project, I decided to create a place where you could not only buy but also sell/give away your children's handmedowns. Instead of buying new clothes when your kid grows out of them... buy a used set. Save some money and save the environment. Similar looking to Etsy users will have the ability to post an item they either want to sell or give away. They will have the ability to edit, update, and delete the post as well.
-![Wireframe](./readme_img/flowchart.png)
+![FlowChart](./readme_img/flowchart.png)
 
 ## **_Front End_**
 
