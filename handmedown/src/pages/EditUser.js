@@ -53,6 +53,7 @@ return(
             {formVal.image &&  <img src={formVal.image} className="image-prof" alt="profileImage" />}
 
             <div className="input-wrap">
+                ImageURL:
             <input
             onChange={handleChange}
             name="image"
@@ -65,6 +66,7 @@ return(
            
 
             <div className="input-text-wrap">
+                Username:
             <input className="textarea-profile"
             onChange={handleChange}
             name="username"
