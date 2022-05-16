@@ -15,31 +15,31 @@ const PostCard = ({ post, users }) => {
         <Card className='my-3 p-3 rounded h-90' onClick={() => showPost(post)} key={post.id}>
           <Card.Img style={{objectFit:"contain"}} variant='top' src={post.image}/>
           <Card.Body>
-            <Card.Title>
+            <h1 className='card-title h1'>
               {`${post.title}`}
               
-            </Card.Title>
-            <Card.Subtitle className='mb-2 text-muted'>
+            </h1 >
+            <h3 className='mb-2 text-muted h3'>
               Price:
-            </Card.Subtitle>
-            <Card.Text>
+            </h3>
+            <h4>
               <div>
               ${`${post.price}`} 
               </div>
-            </Card.Text>
-            <Card.Subtitle className='mb-2 text-muted'>
+            </h4>
+            <h3 className='mb-2 text-muted'>
               Description:
-            </Card.Subtitle>
-            <Card.Text>
+            </h3>
+            <h4>
               <div>
               {`${post.description}`} 
               </div>
-            </Card.Text>
-            <Card.Subtitle className='mb-2 text-muted'>
+            </h4>
+            <h3 className='mb-2 text-muted'>
               Interested?
              
-            </Card.Subtitle>
-            <Card.Text>
+            </h3>
+            <h4>
             <a href={`https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${post.email}`} 
             target="_blank"
             >
@@ -49,7 +49,7 @@ const PostCard = ({ post, users }) => {
                 Contact
               </Button>
               </a> 
-            </Card.Text>
+            </h4>
        
           </Card.Body>
 

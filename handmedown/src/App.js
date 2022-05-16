@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import Nav from './components/Nav';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import './App.css';
@@ -7,8 +6,8 @@ import './style/main.css'
 import React, { useState, useEffect } from 'react';
 import NewAccount from './pages/NewAccount'
 import Login from './pages/Login'
-import Feed from './pages/Feed'
 import Posts from './components/Posts'
+import Comments from './components/Comments'
 import CreatePost from './pages/CreatePost'
 import { CheckSession } from './services/auth'
 import Profile from './pages/ProfilePage';
@@ -16,8 +15,7 @@ import UsersPosts from './pages/UsersPosts';
 import PostDeets from './components/PostDeets';
 import axios from 'axios'
 import EditUser from './pages/EditUser'
-// import axios from 'axios'
-// import PostDetails from './pages/PostDetails'
+
 
 
 function App() {
@@ -75,6 +73,7 @@ function App() {
         <Route path="/edit" exact element={<EditUser user={user} setUser={setUser}  authenticated={authenticated} />} />
         <Route path="/profile" exact element={<Profile user={user} authenticated={authenticated} />} />
         <Route path="/usersPosts" exact element={<UsersPosts user={user} authenticated={authenticated} />} />
+        <Route path="/comments" exact element={<Comments user={user} authenticated={authenticated} />} />
         <Route path="/post/feed/:id" element={ <PostDeets post={post} getPosts={getPosts} />} />
       </Routes>
       </main>

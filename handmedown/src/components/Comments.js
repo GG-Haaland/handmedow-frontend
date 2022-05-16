@@ -7,12 +7,12 @@ import PostCard from './PostCard'
 
 const Comments = (props, user) => {
 
-
+    console.log(props)
     // let navigate = useNavigate()
 
     const [comments, setComments] = useState([])
  
-    // const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     // const getPosts = async () => {
     //     try {

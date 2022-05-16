@@ -5,15 +5,28 @@ import React from 'react'
 import { SliderData } from '../components/SliderData'
 import ImageSlider from '../components/ImageSlider'
 import '../style/home.css'
+import Back from '../assets/images/home.png'
 
 const Home = () => {
-//   let navigate = useNavigate()
+
+
+const myStyle={
+  backgroundImage: 
+"url(`${Back}`)",
+  height:'100vh',
+  marginTop:'-70px',
+  fontSize:'50px',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+};
 
   return (
-    <div className='slider'>
-     <ImageSlider slides={SliderData} />
-   
-    </div>
+    // <div style={myStyle}>
+      <div className='slider'>
+      <ImageSlider slides={SliderData} />
+    
+      </div>
+    // </div>
   )
 }
 

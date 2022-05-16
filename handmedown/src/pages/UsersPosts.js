@@ -78,9 +78,7 @@ const MyPosts = ({ user, authenticated }) => {
               <div className="bigDesc">{cardFocus[1].description}</div>
               {cardFocus[1].userid === user.id ? (
                 <div className="buttons">
-                  <div className="follow-button-wrap">
-                    <div className="follow-button"></div>
-                  </div>
+                  
                   <div
                     className="edit-button-wrap"
                     onClick={() => updatePost(cardFocus[1])}
@@ -117,9 +115,6 @@ const MyPosts = ({ user, authenticated }) => {
 
                 {post.userid === user.id ? (
                   <div className="buttons">
-                    <div className="follow-button-wrap">
-                      <div className="follow-button"></div>
-                    </div>
                     <div
                       className="edit-button-wrap"
                       onClick={() => updatePost(post)}

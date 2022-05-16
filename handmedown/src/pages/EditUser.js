@@ -3,12 +3,13 @@ import { EditAccount } from "../services/UserServices";
 import "../style/profile.css";
 import { useNavigate } from "react-router-dom";
 
-const Edit = ({ user, authenticated, setUser }) => {
-
+const Edit = ({ user, authenticated, setUser, props }) => {
+    let navigate = useNavigate();
+    
   const [formVal, setForm] = useState({
     id: user.id,  
-    username: formVal,
-    image: formVal,
+    username: user.username,
+    image: user.image,
    
 })
 
@@ -29,7 +30,10 @@ const handleChange = (e) =>{
     setForm({ ...formVal, [e.target.name]: e.target.value })
 }
 const handleSubmit = async(e) =>{
+    e.preventDefault();
     const payload = await EditAccount({...formVal})
+    navigate("/profile");
+    window.location.reload()
     console.log(payload)
     
 }
@@ -58,15 +62,7 @@ return(
             />
             </div>
 
-            <div className="input-wrap bio">
-            <input
-            onChange={handleChange}
-            name="bio"
-            type="text"
-            placeholder="Bio"
-            value={formVal.bio}
-            />
-            </div>
+           
 
             <div className="input-text-wrap">
             <input className="textarea-profile"
@@ -78,6 +74,7 @@ return(
             />
             </div>
             <button
+            onClick={(e) => handleSubmit(e)}
             disabled={
                 !authenticated ||
                 !user                

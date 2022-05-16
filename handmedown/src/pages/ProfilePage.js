@@ -3,8 +3,6 @@ import { UserPost, PostEdit, PostDelete, } from "../services/PostServices";
 import { useNavigate } from "react-router-dom";
 import Comments from "../components/Comments";
 import "../style/profile.css";
-// import "../style/main.css"
-// import "../style/Feed.css"
 import { Link } from "react-router-dom";
 import { BsGearFill }  from 'react-icons/bs';
 import { Button, Card } from 'react-bootstrap'
@@ -19,8 +17,9 @@ const ProfilePage = ({ user, authenticated }) => {
 
 
   const navDelete = (post) => {
-    navigate(`../post/${post.id}`);
+    navigate(`/profile`);
     delPost(post);
+    window.location.reload()
   };
   const delPost = async (post) => {
     const sendload = {
@@ -34,9 +33,12 @@ const ProfilePage = ({ user, authenticated }) => {
   const updatePost = (post) => {
     editPost([!editpost[0], post.id]);
     setDesc(post.description);
+   
+    
   };
   const handleChange = (e) => {
     setDesc(e.target.value);
+    
   };
   const sendit = async (post) => {
     const sendload = {
@@ -46,6 +48,8 @@ const ProfilePage = ({ user, authenticated }) => {
     console.log(sendload);
     const payload = await PostEdit(sendload);
     console.log(payload);
+    navigate(`/feed`);
+    window.location.reload()
   };
 
   const focusCard= (post) =>{
@@ -111,9 +115,6 @@ const ProfilePage = ({ user, authenticated }) => {
               <div className="bigDesc">{cardFocus[1].description}</div>
               {cardFocus[1].userid === user.id ? (
                 <div className="buttons">
-                  <div className="follow-button-wrap">
-                    <div className="follow-button"></div>
-                  </div>
                   <div
                     className="edit-button-wrap"
                     onClick={() => updatePost(cardFocus[1])}
@@ -150,9 +151,7 @@ const ProfilePage = ({ user, authenticated }) => {
 
                 {post.userid === user.id ? (
                   <div className="buttons">
-                    <div className="follow-button-wrap">
-                      <div className="follow-button"></div>
-                    </div>
+                   
                     <div
                       className="edit-button-wrap"
                       onClick={() => updatePost(post)}

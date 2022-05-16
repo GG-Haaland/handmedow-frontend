@@ -25,7 +25,7 @@ let navigate = useNavigate()
         }else{
             props.toggleAuthenticated(false)
         }
-        navigate('/profile')
+        navigate('/feed')
       }
 
       // Allows users to use "Enter" keybind to sign in
@@ -76,46 +76,3 @@ let navigate = useNavigate()
 
 export default Login
 
-{/* <div
-        onKeyPress={handleKeypress}
-        className="color-overlay d-flex justify-content-center align-items-center"
-      >
-        <Form className="rounded p-4 p-sm-3">
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email Address</Form.Label>
-            <Form.Control
-              onChange={handleChange}
-              type="email"
-              placeholder="Enter Email"
-              value={formVal.email}
-              required
-            />
-            <Form.Text className="test-muted">
-              We'll never share your email with anyone else
-            </Form.Text>
-          </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              onChange={handleChange}
-              type="password"
-              placeholder="password"
-              value={formVal.password}
-              onKeyPress={handleKeypress}
-              required
-            />
-          </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Remember Me" />
-          </Form.Group>
-          <button  className= 'sign-in'
-                disabled={
-                    !formVal.email ||
-                    !formVal.password                 
-                }
-                > Sign In</button>
-        </Form>
-      </div>
-    ); */}
