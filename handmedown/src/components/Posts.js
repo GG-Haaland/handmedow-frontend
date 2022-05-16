@@ -5,10 +5,7 @@ import PostCard from './PostCard'
 import { useNavigate } from "react-router-dom";
 
 const Posts = (users, props) => {
-    let navigate = useNavigate();
-    const showPost = (post) => {
-      navigate(`${post.id}`);
-    };
+   
         useEffect(() => {
             getPosts()
         },[])
@@ -35,7 +32,7 @@ const Posts = (users, props) => {
             {loading && 
             posts.map((post) =>(
                 <Col sm={12} med={6} lg={4} key={post.id}>
-                    <PostCard onClick={() => showPost(post)} post={post} users={users}/>
+                    <PostCard post={post} users={users}/>
                 </Col>
             ))}
         </Row>

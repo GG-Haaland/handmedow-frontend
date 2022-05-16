@@ -7,12 +7,10 @@ const PostCard = ({ post, users }) => {
   console.log(users)
   let navigate = useNavigate();
 
-  const showPost = (post) => {
-    navigate(`post/${post.id}`);
-  };
+ 
   return (
     <div>
-        <Card className='my-3 p-3 rounded h-90' onClick={() => showPost(post)} key={post.id}>
+        <Card className='my-3 p-3 rounded h-90' key={post.id}>
           <Card.Img style={{objectFit:"contain"}} variant='top' src={post.image}/>
           <Card.Body>
             <h1 className='card-title h1'>
