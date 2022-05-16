@@ -33,7 +33,7 @@ const Posts = (users, props) => {
         <Container>
         <Row>
             {loading && 
-            posts.reverse().map((post) =>(
+            posts.map((post) =>(
                 <Col sm={12} med={6} lg={4} key={post.id}>
                     <PostCard onClick={() => showPost(post)} post={post} users={users}/>
                 </Col>

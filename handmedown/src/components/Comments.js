@@ -49,8 +49,8 @@ const Comments = (props, user) => {
   
             {comments.map((comment) => (
                 <div className="comment-single" key={comment.id}>
-                
-                <div>{props.username}:{comment.description}</div>
+                <div>Comments</div>
+                <div>HiddenUser:{'' + comment.description}</div>
                 {/* <div>Post Id: {comment.postid} </div> */}
            
                 </div>
